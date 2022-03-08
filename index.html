@@ -4,7 +4,11 @@
 		<title>Граф истории языков</title>
 		<script src="js/uploader.js"></script>
 		<script>
-			const localizations = getJson("db/localizations.json");
+			let localizations = {};
+			
+			getJson("db/localizations.json", function(json) {
+				localizations = json;
+			});
 		</script>
 	</head>
 	<body>
