@@ -12,7 +12,7 @@
 			};
 			
 			getJson("db/localizations.json", function(json) {
-				for (const [key, value] of Object.entries(obj)) {
+				for (const [key, value] of Object.entries(json)) {
 					localizations.values[key] = value;
 				}
 				localizations.onLoad();
