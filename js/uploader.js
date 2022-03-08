@@ -8,7 +8,7 @@ function getJson(url, callback, errorCallback = null) {
 			}
 		} else {
 			const body = JSON.parse(request.responseText);
-			callback(request.responseText, request);
+			callback(body, request);
 		}
 	};
 	request.send();
