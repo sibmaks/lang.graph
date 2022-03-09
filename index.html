@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Граф истории языков</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+		<title data-localization="web.title">Граф истории языков</title>
+		<link rel="icon" type="image/x-icon" href="favicon.png">
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+		<script src="https://unpkg.com/@popperjs/core@2"></script>
+		<script src="https://unpkg.com/tippy.js@6"></script>
 		<script src="js/uploader.js"></script>
+		<script src="js/languages.js"></script>
+		<script src="js/localization.js"></script>
+		<script src="js/tippy.js"></script>
+		<script src="js/cytoscape-popper.js"></script>
+		<script src="js/lang.graph.js"></script>
 		<script>
-			const localizations = {
-				values: {},				
-				onLoad: function() {
-					console.log(this.values);
+			languages.init(function() {
+				const flagsContainer = document.getElementById("flags_container");
+				for (const [key, value] of Object.entries(languages.values)) {
+					flagsContainer.innerHTML += `<img class="flag" alt="${value.short}" src="${value.url}" onClick="localizations.setLanguage('${key}')"/>`;
 				}
-			};
-			
-			getJson("db/localizations.json", function(json) {
-				for (const [key, value] of Object.entries(json)) {
-					localizations.values[key] = value;
-				}
-				localizations.onLoad();
 			});
+			localizations.init(function() {
+				getJson("db/languages/languages.json", function(json) {
+					buildLanguageGraph(json);
+				});
+			});
+
 		</script>
 	</head>
 	<body>
-		<h2>Тут будет граф</h2>
+		<div id="flags_container"></div>
+		<h1 data-localization="web.body.header">Cytoscape граф языков мира</h1>
+		<div id="cy"></div>
 	</body>
 </html>

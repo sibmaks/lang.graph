@@ -1,0 +1,43 @@
+body {
+	font-family: helvetica neue, helvetica, liberation sans, arial, sans-serif;
+	font-size: 14px
+}
+
+#cy {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+}
+
+h1 {
+	opacity: 0.5;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+/* makes sticky faster; disable if you want animated tippies */
+.tippy-popper {
+	transition: none !important;
+}
+
+#flags_container {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	z-index: 10;
+}
+
+.flag {
+	padding: 4px;
+	width: 20px;
+	height: 20px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5px;
+}
+
+.flag:active {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}

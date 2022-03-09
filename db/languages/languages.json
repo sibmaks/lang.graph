@@ -1,0 +1,138 @@
+{
+    "proto-language": {
+        "type": "language",
+        "appeared": {
+            "type": "IN",
+            "step": "MILLENNIUM",
+            "from": 13,
+            "to": 14,
+            "era": "BC"
+        }
+    },
+    "nostratic-langs-family": {
+        "parent": "proto-language",
+        "type": "family",
+        "appeared": {
+            "type": "IN",
+            "step": "MILLENNIUM",
+            "from": 10,
+            "to": 11,
+            "era": "BC"
+        }
+    },
+    "dene–caucasian-family": {
+        "parent": "proto-language",
+        "type": "family",
+        "appeared": {
+            "type": "FROM",
+            "step": "MILLENNIUM",
+            "from": 9,
+            "era": "BC"
+        }
+    },
+    "afroasiatic-family": {
+        "parent": "proto-language",
+        "type": "family",
+        "appeared": {
+            "type": "IN",
+            "step": "MILLENNIUM",
+            "from": 10,
+            "to": 11,
+            "era": "BC"
+        }
+    },
+    "indo-european-group": {
+        "parent": "nostratic-langs-family",
+        "type": "group",
+        "appeared": {
+            "type": "FROM",
+            "step": "MILLENNIUM",
+            "from": 4,
+            "era": "BC"
+        }
+    },
+    "kartvelian-group": {
+        "parent": "nostratic-langs-family",
+        "type": "family",
+        "appeared": {
+            "type": "FROM",
+            "step": "MILLENNIUM",
+            "from": 3,
+            "era": "BC"
+        }
+    },
+    "balto-slavic-group": {
+        "parent": "indo-european-group",
+        "type": "group",
+        "appeared": {
+            "type": "FROM",
+            "step": "MILLENNIUM",
+            "from": 1,
+            "era": "BC"
+        }
+    },
+    "slavic-group": {
+        "parent": "balto-slavic-group",
+        "type": "group",
+        "appeared": {
+            "type": "FROM",
+            "step": "MILLENNIUM",
+            "from": 0,
+            "era": "AC"
+        }
+    },
+    "east-slavic-group": {
+        "parent": "slavic-group",
+        "type": "group"
+    },
+    "svan-language": {
+        "parent": "kartvelian-group",
+        "type": "language"
+    },
+    "georgian-language": {
+        "parent": "kartvelian-group",
+        "type": "language"
+    },
+    "mingrelian-language": {
+        "parent": "kartvelian-group",
+        "type": "language"
+    },
+    "laz-language": {
+        "parent": "kartvelian-group",
+        "type": "language"
+    },
+    "old-east-slavic-language": {
+        "parent": "east-slavic-group",
+        "type": "language"
+    },
+    "russian-language": {
+        "parent": "old-east-slavic-language",
+        "type": "language"
+    },
+    "belarusian-language": {
+        "parent": "old-east-slavic-language",
+        "type": "language"
+    },
+    "ukrainian-language": {
+        "parent": "old-east-slavic-language",
+        "type": "language"
+    },
+    "сeltic-group": {
+        "parent": "indo-european-group",
+        "type": "group",
+        "appeared": {
+            "type": "FROM",
+            "step": "MILLENNIUM",
+            "from": 0,
+            "era": "AC"
+        }
+    },
+    "breton-language": {
+        "parent": "сeltic-group",
+        "type": "language"
+    },
+    "welsh-language": {
+        "parent": "сeltic-group",
+        "type": "language"
+    }
+}

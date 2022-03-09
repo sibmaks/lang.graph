@@ -2,5 +2,89 @@
 	"web.title": {
 		"eng": "Language history graph",
 		"rus": "Граф истории языков"
-	}
+	},
+	"web.body.header": {
+		"eng": "Cytoscape graph of world languages",
+		"rus": "Cytoscape граф языков мира"
+	},
+	"proto-language": {
+        "rus": "Прото язык",
+        "eng": "Proto lang"
+	},
+	"nostratic-langs-family": {
+        "rus": "Ностратические языки",
+        "eng": "Nostratic languages"
+	},
+    "dene–caucasian-family": {
+        "rus": "Сино-кавказские языки",
+        "eng": "Dene–Caucasian languages"
+    },
+    "afroasiatic-family": {
+		"rus": "Афразийские языки",
+		"eng": "Afroasiatic languages"
+    },
+    "indo-european-group": {
+		"rus": "Индоевропейские языки",
+		"eng": "Indo-European languages"
+    },
+	"balto-slavic-group": {
+		"rus": "Балто-славянские языки",
+		"eng": "Balto-Slavic languages"
+    },
+	"slavic-group": {
+		"rus": "Славянские языки",
+		"eng": "Slavic languages"
+    },
+	"east-slavic-group": {
+		"rus": "Восточнославянские языки",
+		"eng": "East Slavic languages"
+    },
+	"old-east-slavic-language": {
+		"rus": "Древнерусский язык",
+		"eng": "Old East Slavic"
+    },
+	"russian-language": {
+		"rus": "Русский язык",
+		"eng": "Russian language"
+    },
+	"belarusian-language": {
+		"rus": "Белорусский язык",
+		"eng": "Belarusian language"
+    },
+	"ukrainian-language": {
+		"rus": "Украинский язык",
+		"eng": "Ukrainian language"
+    },
+	"сeltic-group": {
+		"rus": "Кельтские языки",
+		"eng": "Celtic languages"
+    },
+	"breton-language": {
+		"rus": "Бретонский язык",
+		"eng": "Breton language"
+    },
+	"welsh-language": {
+		"rus": "Валлийский язык",
+		"eng": "Welsh language"
+    },
+	"kartvelian-group": {
+		"rus": "Картвельские языки",
+		"eng": "Kartvelian languages"
+    },
+	"svan-language": {
+		"rus": "Сванский язык",
+		"eng": "Svan language"
+    },
+	"georgian-language": {
+		"rus": "Грузинский язык",
+		"eng": "Georgian language"
+    },
+	"mingrelian-language": {
+		"rus": "Мегрельский язык",
+		"eng": "Mingrelian language"
+    },
+	"laz-language": {
+		"rus": "Лазский язык",
+		"eng": "Laz language"
+    }
 }

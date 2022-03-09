@@ -1,0 +1,12 @@
+{
+	"rus": {
+		"name": "Russian",
+		"short": "Ру",
+		"url": "res/flags/ru.svg"
+	},
+	"eng": {
+		"name": "English",
+		"short": "En",
+		"url": "res/flags/us.svg"
+	}
+}

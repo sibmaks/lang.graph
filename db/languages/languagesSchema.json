@@ -1,0 +1,68 @@
+{
+	"$schema": "http://json-schema.org/draft/2020-12/schema#",
+	"description": "Схемы файла с языками и группами",
+	"type": "object",
+	"patternProperties": {
+		"([a-zA-Z\\-])+": {
+			"type": "object",
+			"required": ["type", "localizations"],
+			"properties": {
+				"parent": {
+					"type": ["null", "string"],
+					"pattern": "([a-zA-Z\\-])+",
+					"description": "Родитель языкогого элемента"
+				},
+				"type": {
+					"type": "string",
+					"description": "Тип языкового элемента",
+					"enum": ["group", "language", "family"]
+				},
+				"localizations": {
+					"type": "object",
+					"description": "Локализации языкого элемента",
+					"properties": {
+						"rus": {
+							"type": "string",
+							"description": "Локализация на русском языке",
+							"pattern": "([а-яА-ЯёЁ\\- ])+"
+						},
+						"eng": {
+							"type": "string",
+							"description": "Локализация на английском языке",
+							"pattern": "([a-zA-Z\\- ])+"
+						}
+					}
+				},
+				"appeared": {
+					"type": "object",
+					"description": "Время появления языкого элемента",
+					"properties": {
+						"type": {
+							"type": "string",
+							"description": "Тип временного промежутка (интервал, луч)",
+							"enum": ["IN", "FROM"]
+						},
+						"step": {
+							"type": "string",
+							"description": "Временной шаг",
+							"enum": ["MILLENNIUM", "CENTURY"]
+						},
+						"from": {
+							"type": ["null", "integer"],
+							"description": "Начало временного отрезка"
+						},
+						"to": {
+							"type": ["null", "integer"],
+							"description": "Окончание временного отрезка"
+						},
+						"era": {
+							"type": "string",
+							"description": "Временная эра",
+							"enum": ["BC", "AC"]
+						}
+					}
+				}
+			}
+		}
+	}
+}
