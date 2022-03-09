@@ -93,8 +93,10 @@ function buildLanguageGraph(data) {
 
         layout: {
             name: 'breadthfirst',
+            fit: false,
             directed: true,
-            spacingFactor: 1.2
+            avoidOverlap: false,
+            spacingFactor: 1.1
         }
     });
 

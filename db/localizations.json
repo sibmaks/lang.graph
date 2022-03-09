@@ -67,7 +67,7 @@
 		"rus": "Валлийский язык",
 		"eng": "Welsh language"
     },
-	"kartvelian-group": {
+	"kartvelian-family": {
 		"rus": "Картвельские языки",
 		"eng": "Kartvelian languages"
     },
@@ -79,6 +79,10 @@
 		"rus": "Грузинский язык",
 		"eng": "Georgian language"
     },
+	"zan-languages": {
+		"rus": "Занские языки",
+		"eng": "Zan languages"
+    },
 	"mingrelian-language": {
 		"rus": "Мегрельский язык",
 		"eng": "Mingrelian language"
@@ -86,5 +90,25 @@
 	"laz-language": {
 		"rus": "Лазский язык",
 		"eng": "Laz language"
+    },
+	"dravidian-family": {
+		"rus": "Дравидийские языки",
+		"eng": "Dravidian languages"
+    },
+	"telugu-language": {
+		"rus": "Телугу",
+		"eng": "Telugu language"
+    },
+	"elamite-language": {
+		"rus": "Эламский язык",
+		"eng": "Elamite language"
+    },
+	"brahui-language": {
+		"rus": "Брауи",
+		"eng": "Brahui language"
+    },
+	"tamil-language": {
+		"rus": "Тамильский язык",
+		"eng": "Tamil language"
     }
 }

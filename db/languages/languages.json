@@ -51,7 +51,7 @@
             "era": "BC"
         }
     },
-    "kartvelian-group": {
+    "kartvelian-family": {
         "parent": "nostratic-langs-family",
         "type": "family",
         "appeared": {
@@ -61,15 +61,52 @@
             "era": "BC"
         }
     },
-    "balto-slavic-group": {
-        "parent": "indo-european-group",
-        "type": "group",
+    "svan-language": {
+        "parent": "kartvelian-family",
+        "type": "language"
+    },
+    "georgian-language": {
+        "parent": "kartvelian-family",
+        "type": "language"
+    },
+    "zan-languages": {
+        "parent": "kartvelian-family",
+        "type": "group"
+    },
+    "mingrelian-language": {
+        "parent": "zan-languages",
+        "type": "language"
+    },
+    "laz-language": {
+        "parent": "zan-languages",
+        "type": "language"
+    },
+    "dravidian-family": {
+        "parent": "nostratic-langs-family",
+        "type": "family",
         "appeared": {
-            "type": "FROM",
+            "type": "IN",
             "step": "MILLENNIUM",
-            "from": 1,
+            "from": 3,
+            "to": 4,
             "era": "BC"
         }
+    },
+    "telugu-language": {
+        "parent": "dravidian-family",
+        "type": "language"
+    },
+    "elamite-language": {
+        "parent": "dravidian-family",
+        "type": "language"
+    },
+    "brahui-language": {
+        "parent": "dravidian-family",
+        "type": "language"
+    },
+    "tamil-language": {
+        "parent": "dravidian-family",
+        "type": "language"
     },
     "slavic-group": {
         "parent": "balto-slavic-group",
@@ -85,25 +122,19 @@
         "parent": "slavic-group",
         "type": "group"
     },
-    "svan-language": {
-        "parent": "kartvelian-group",
-        "type": "language"
-    },
-    "georgian-language": {
-        "parent": "kartvelian-group",
-        "type": "language"
-    },
-    "mingrelian-language": {
-        "parent": "kartvelian-group",
-        "type": "language"
-    },
-    "laz-language": {
-        "parent": "kartvelian-group",
-        "type": "language"
-    },
     "old-east-slavic-language": {
         "parent": "east-slavic-group",
         "type": "language"
+    },
+    "balto-slavic-group": {
+        "parent": "indo-european-group",
+        "type": "group",
+        "appeared": {
+            "type": "FROM",
+            "step": "MILLENNIUM",
+            "from": 1,
+            "era": "BC"
+        }
     },
     "russian-language": {
         "parent": "old-east-slavic-language",
