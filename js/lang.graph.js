@@ -92,11 +92,13 @@ function buildLanguageGraph(data) {
         wheelSensitivity: 0.1,
 
         layout: {
-            name: 'breadthfirst',
+            name: 'cose-bilkent',
             fit: false,
-            directed: true,
-            avoidOverlap: false,
-            spacingFactor: 1.1
+            padding: 32,
+            gravity: 10,
+            animate: false,
+            randomize: true,
+            nodeDimensionsIncludeLabels: true
         }
     });
 
