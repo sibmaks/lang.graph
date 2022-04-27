@@ -1,42 +1,68 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-		<title data-localization="web.title">Граф истории языков</title>
-		<link rel="icon" type="image/x-icon" href="favicon.png">
-		<link rel="stylesheet" href="css/style.css" />
-
-		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
-		<script src="https://unpkg.com/@popperjs/core@2"></script>
-		<script src="https://unpkg.com/tippy.js@6"></script>
-		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
-		<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <head>
+        <title data-localization="web.title"></title>
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="js/utils.js"></script>
 		<script src="js/uploader.js"></script>
 		<script src="js/languages.js"></script>
 		<script src="js/localization.js"></script>
-		<script src="js/tippy.js"></script>
-		<script src="js/cytoscape-popper.js"></script>
-		<script src="js/cytoscape-cose-bilkent.js"></script>
 		<script src="js/lang.graph.js"></script>
-		<script>
-			languages.init(function() {
-				const flagsContainer = document.getElementById("flags_container");
-				for (const [key, value] of Object.entries(languages.values)) {
-					flagsContainer.innerHTML += `<img class="flag" alt="${value.short}" src="${value.url}" onClick="localizations.setLanguage('${key}')"/>`;
-				}
-			});
-			localizations.init(function() {
-				getJson("db/languages/languages.json", function(json) {
-					buildLanguageGraph(json);
-				});
-			});
-
-		</script>
-	</head>
-	<body>
+		<link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+		<h1 data-localization="web.body.header"></h1>
 		<div id="flags_container"></div>
-		<h1 data-localization="web.body.header">Cytoscape граф языков мира</h1>
-		<div id="cy"></div>
-	</body>
+		<div id="tree-container"></div>
+ 
+		<script type="text/javascript">
+		languages.init(function() {
+			const flagsContainer = document.getElementById("flags_container");
+			for (const [key, value] of Object.entries(languages.values)) {
+				flagsContainer.innerHTML += `<img class="flag" alt="${value.short}" src="${value.url}" onClick="localizations.setLanguage('${key}')"/>`;
+			}
+		});
+
+		localizations.init(function() {
+			getJson("db/languages/languages.json", function(langs) {
+				const roots = [];
+					
+				for(let code in langs) {
+					const lang = langs[code];
+					const parent = lang.parent;
+					const children = [];
+					const value = {code: code, 
+								name: localizations.get(code),
+								lang: lang, 
+								children: children};
+					let parentFound = false;
+						
+					for(let i in roots) {
+						const root = roots[i];
+						if(root.lang.parent === code) {
+							children.push(root);
+						} else if(!parentFound) {
+							const realParent = findParent(roots, parent);
+							if(realParent !== null) {
+								realParent.children.push(value);
+								parentFound = true;
+							}
+						}
+					}
+						
+					for(let i in children) {
+						remove(roots, children[i]);
+					}
+						
+					if(!parentFound) {
+						roots.push(value);
+					}
+				}
+				root = roots[0];  
+				buildLanguageGraph(root);
+			});
+		});
+		</script>
+</body>
 </html>

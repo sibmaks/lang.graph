@@ -1,7 +1,6 @@
 const localizations = {
-	language: "eng",
+	language: new URL(window.location.href).searchParams.get("lang") || 'eng',
 	values: {},
-	listeners: [],
 	onLoad: function() {
 		localizations._localize();
 	},
@@ -25,14 +24,9 @@ const localizations = {
 		});
 	},
 	setLanguage: function(lang) {
-		localizations.language = lang;
-		localizations._localize();
-		for(const listener of localizations.listeners) {
-			listener();
-		}
-	},
-	addListener: function(listener) {
-		localizations.listeners.push(listener);
+		const url = new URL(window.location.href);
+		url.searchParams.set("lang", lang);
+		window.location.href = url;
 	},
 	get: function(code) {
 		const values = localizations.values[code];
